@@ -1,0 +1,5 @@
+You reached a dead end! This isn't the right genre. You can go back and rethink your choice.
+
+While some of the songs are upbeat, their music is more known for their vocals and softer melodies than hip-hop
+
+>> Use 'cd ..' to go back

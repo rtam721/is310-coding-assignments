@@ -1,0 +1,5 @@
+You reached a dead end! This isn't the right genre. You can go baack and rethink your choice.
+
+Some of the songs are upbeat, but their music isn't known for rock
+
+>> Use 'cd ..' to go back
