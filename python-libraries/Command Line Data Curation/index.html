@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<head>
+    <title>Music Artist Collaborations</title>
+</head>
+<body>
+    <form id="collaboration-form">
+    <table>
+        <caption style="font-weight: bold; font-size: 1.2em; padding: 20px; padding-bottom: 30px;">Music Artist Collaborations And The Genres They Work With</caption>
+        <thead>
+            <tr style="background-color: #c9c9c9;">
+                <th scope="col">Artist</th>
+                <th scope="col">Song Title</th>
+                <th scope="col">Collaborating Artist</th>
+                <th scope="col">Year Released</th>
+                <th scope="col">Song Genre</th>
+                <th scope="col">Artist Genre</th>
+                <th scope="col">Collaborating Artist Genre</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ariana Grande</td>
+                <td>The Way</td>
+                <td>Mac Miller</td>
+                <td>2013</td>
+                <td>Pop</td>
+                <td>Pop</td>
+                <td>Hip Hop</td>
+            </tr>
+            <tr>
+                <td>Taylor Swift</td>
+                <td>Bad Blood (Remix)</td>
+                <td>Kendrick Lamar</td>
+                <td>2015</td>
+                <td>Pop</td>
+                <td>Pop</td>
+                <td>Hip Hop/Rap</td>
+            </tr>
+        </tbody>
+        <tbody id="collaboration-table-body">
+            <tr>
+                <td><input type="text" required></td>
+                <td><input type="text" required></td>
+                <td><input type="text" required></td>
+                <td><input type="number" required></td>
+                <td><input type="text" required></td>
+                <td><input type="text" required></td>
+                <td><input type="text" required></td>
+            </tr>
+        </tbody>
+    </table>
+    <button type="submit">Submit</button>
+    </form>
+    <script>
+        const form = document.getElementById('collaboration-form');
+        const tableBody = document.getElementById("collaboration-table-body");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const inputs = tableBody.querySelectorAll("input"); 
+            const newRow = tableBody.rows[0].cloneNode(true);
+
+            inputs.forEach(function(input) {
+                const cell = input.parentElement;
+                cell.textContent = input.value;
+            });
+            newRow.querySelectorAll("input").forEach(function(input) {
+                input.value = "";
+            });
+            tableBody.appendChild(newRow);
+            });
+    </script>
+</body>
+</html>
+
